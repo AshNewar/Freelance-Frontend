@@ -13,7 +13,7 @@ const useAuthSchema = ({ schema, userInfo }: IUseAuthSchema): [() => Promise<boo
       .catch((err) => {
         setValidationErrors([...err.errors]);
       });
-    const validation: boolean = await schema.isValid(userInfo, { abortEarly: false });
+    const validation: boolean = await schema.isValid(userInfo, { abortEarly: false }); // return boolean
     return validation;
   }
   return [schemaValidation, validationErrors];

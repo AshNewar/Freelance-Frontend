@@ -36,7 +36,7 @@ const RegisterModal: FC<IModalBgProps> = ({ onClose, onToggle }): ReactElement =
   });
   const fileInputRef = useRef<HTMLInputElement>(null);
   const dispatch = useAppDispatch();
-  const [schemaValidation] = useAuthSchema({ schema: registerUserSchema, userInfo });
+  const [schemaValidation] = useAuthSchema({ schema: registerUserSchema, userInfo }); //You can also get the validation Errors
   const [signUp, { isLoading }] = useSignUpMutation();
 
   const handleFileChange = async (event: ChangeEvent): Promise<void> => {
