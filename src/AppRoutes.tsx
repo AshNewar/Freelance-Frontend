@@ -48,7 +48,7 @@ const AppRouter: FC = () => {
       )
     },
     {
-      path: 'confirm_email',
+      path: 'verify_email',
       element: (
         <Suspense>
           <ConfirmEmail />

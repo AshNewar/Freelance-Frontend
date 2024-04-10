@@ -34,6 +34,7 @@ const LoginModal: FC<IModalBgProps> = ({ onClose, onToggle, onTogglePassword }):
       const isValid: boolean = await schemaValidation();
       if (isValid) {
         const result: IResponse = await signIn(userInfo).unwrap();
+        console.log(result);
         setAlertMessage('');
         dispatch(addAuthUser({ authInfo: result.user }));
         dispatch(updateLogout(false));

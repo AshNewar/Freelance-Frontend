@@ -80,13 +80,13 @@ export const authApi = api.injectEndpoints({
       providesTags: ['Currentuser']
     }),
     getLoggedInUser: build.query<IResponse, void>({
-      query: () => 'auth/logged-in-user',
+      query: () => 'auth/logged-in-users',
       providesTags: ['Auth']
     }),
     removeLoggedInUser: build.mutation<IResponse, string>({
       query(username: string) {
         return {
-          url: `auth/logged-in-user/${username}`,
+          url: `auth/logged-in-users/${username}`,
           method: 'DELETE'
         };
       }

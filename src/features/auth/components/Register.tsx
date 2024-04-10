@@ -101,9 +101,8 @@ const RegisterModal: FC<IModalBgProps> = ({ onClose, onToggle }): ReactElement =
             </li>
             <li className="flex items-center">
               <span
-                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-bold text-white lg:h-12 lg:w-12 ${
-                  step === 2 ? 'bg-sky-500 dark:bg-sky-500' : 'bg-sky-300/50 dark:bg-sky-300/50'
-                }`}
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full font-bold text-white lg:h-12 lg:w-12 ${step === 2 ? 'bg-sky-500 dark:bg-sky-500' : 'bg-sky-300/50 dark:bg-sky-300/50'
+                  }`}
               >
                 2
               </span>
@@ -173,9 +172,8 @@ const RegisterModal: FC<IModalBgProps> = ({ onClose, onToggle }): ReactElement =
             </div>
             <Button
               disabled={!userInfo.username || !userInfo.email || !userInfo.password}
-              className={`text-md block w-full cursor-pointer rounded bg-sky-500 px-8 py-2 text-center font-bold text-white hover:bg-sky-400 focus:outline-none ${
-                !userInfo.username || !userInfo.email || !userInfo.password ? 'cursor-not-allowed' : 'cursor-pointer'
-              }`}
+              className={`text-md block w-full cursor-pointer rounded bg-sky-500 px-8 py-2 text-center font-bold text-white hover:bg-sky-400 focus:outline-none ${!userInfo.username || !userInfo.email || !userInfo.password ? 'cursor-not-allowed' : 'cursor-pointer'
+                }`}
               label="Continue"
               onClick={() => setStep(2)}
             />
@@ -247,9 +245,8 @@ const RegisterModal: FC<IModalBgProps> = ({ onClose, onToggle }): ReactElement =
             </div>
             <Button
               disabled={!userInfo.country || !userInfo.profilePicture}
-              className={`text-md block w-full cursor-pointer rounded bg-sky-500 px-8 py-2 text-center font-bold text-white hover:bg-sky-400 focus:outline-none ${
-                !userInfo.country || !userInfo.profilePicture ? 'cursor-not-allowed' : 'cursor-pointer'
-              }`}
+              className={`text-md block w-full cursor-pointer rounded bg-sky-500 px-8 py-2 text-center font-bold text-white hover:bg-sky-400 focus:outline-none ${!userInfo.country || !userInfo.profilePicture ? 'cursor-not-allowed' : 'cursor-pointer'
+                }`}
               label={`${isLoading ? 'SIGNUP IN PROGRESS...' : 'SIGNUP'}`}
               onClick={onRegisterUser}
             />
